@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Skills | ABHISHEK ARVINDBHAI BORISAGAR</title>
+    <meta name="description" content="Technical Program Manager with an engineering background, experienced in coordinating complex, multi-stakeholder technical programs across software, systems, quality, and delivery. Strong foundation in engineering, data, and structured program execution.">
+    <meta name="keywords" content="Technical Program Manager, Engineering Background, Program Delivery, Systems Engineering, Software Lifecycle, Risk Management, Stakeholder Coordination, Quality & Validation, Automotive Programs">
+
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    
+    <style>
+        /* Enhanced scrollbar for skills section */
+        .skills-timeline-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .timeline-container {
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 15px;
+            margin-top: 30px;
+        }
+        
+        /* Custom scrollbar styling */
+        .timeline-container::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        .timeline-container::-webkit-scrollbar-track {
+            background: var(--section-bg);
+            border-radius: 10px;
+        }
+        
+        .timeline-container::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--primary-color), var(--primary-dark));
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-container::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, var(--primary-dark), var(--primary-color));
+            transform: scale(1.05);
+        }
+        
+        /* Firefox scrollbar */
+        .timeline-container {
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) var(--section-bg);
+        }
+        
+        /* Enhanced skill level styling */
+        .skill-level-container {
+            margin: 15px 0;
+        }
+        
+        .skill-item {
+            margin-bottom: 15px;
+        }
+        
+        .skill-name-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .skill-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .skill-name i {
+            color: var(--primary-color);
+            width: 20px;
+        }
+        
+        .skill-percentage {
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background: var(--border-color);
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .skill-level {
+            height: 100%;
+            border-radius: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+            width: 0;
+            transition: width 1.5s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-level::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.2), 
+                transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        /* Enhanced tech tags */
+        .tech-tag {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .tech-tag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .tech-tag:hover::before {
+            left: 100%;
+        }
+        
+        .tech-tag:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Proficiency levels */
+        .proficiency-level {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(74, 108, 247, 0.1);
+            padding: 4px 12px;
+            border-radius: 15px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .proficiency-level i {
+            color: var(--primary-color);
+            font-size: 0.8rem;
+        }
+        
+        /* Skill category header */
+        .skill-category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        
+        .category-title i {
+            color: var(--primary-color);
+        }
+        
+        .category-title:hover i {
+            animation: bounce 0.5s ease;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        /* Skill icons animation */
+        .skill-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-name:hover .skill-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .timeline-container {
+                max-height: 500px;
+                padding-right: 5px;
+            }
+            
+            .skill-category-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .proficiency-level {
+                align-self: flex-start;
+            }
+        }
+        
+        /* Skills filter section */
+        .skills-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .skill-filter-btn {
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px; /* square with soft corners */
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover */
+.skill-filter-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Active */
+.skill-filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 5px 15px rgba(74, 108, 247, 0.25);
+}
+
+/* Ripple glow (same as Projects) */
+.skill-filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.skill-filter-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+        
+        
+        /* Skills grid for additional technologies */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .skill-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .skill-card-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .skill-card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .skill-card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body data-theme="light" lang="en">
+     <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="container nav-content">
+            <a href="home.html" class="logo">
+                <div class="logo-container">
+                    <img src="assets/images/logo.png" alt="Abhishek Arvindbhai Borisagar Logo" class="logo-img">
+                </div>
+            </a>
+            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="home.html" class="nav-link" data-lang="en">Home</a></li>
+                    <li><a href="home.html" class="nav-link" data-lang="de">Startseite</a></li>
+                    <li><a href="experience.html" class="nav-link" data-lang="en">Experience</a></li>
+                    <li><a href="experience.html" class="nav-link" data-lang="de">Erfahrung</a></li>
+                    <li><a href="projects.html" class="nav-link" data-lang="en">Projects</a></li>
+                    <li><a href="projects.html" class="nav-link" data-lang="de">Projekte</a></li>
+                    <li><a href="skills.html" class="nav-link active" data-lang="en">Skills</a></li>
+                    <li><a href="skills.html" class="nav-link active" data-lang="de">Fähigkeiten</a></li>
+                    <li><a href="edu.html" class="nav-link" data-lang="en">Education</a></li>
+                    <li><a href="edu.html" class="nav-link" data-lang="de">Bildung</a></li>
+                    <li><a href="contact.html" class="nav-link" data-lang="en">Contact</a></li>
+                    <li><a href="contact.html" class="nav-link" data-lang="de">Kontakt</a></li>
+                </ul>
+                
+                <div class="nav-controls">
+                    <!-- Theme Switcher -->
+                    <div class="theme-switcher">
+                        <button class="theme-btn active" data-theme="light" title="Light Theme">
+                            <i class="fas fa-sun"></i>
+                        </button>
+                        <button class="theme-btn" data-theme="dark" title="Dark Theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Language Switcher - UPDATED TO MATCH CONTACT.HTML -->
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="de">DE</button>
+                    </div>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">
+                <i class="fas fa-code"></i>
+                <span data-lang="en">Technical Skills & Expertise</span>
+                <span data-lang="de">Technische Kompetenzen & Expertise</span>
+            </h1>
+            <p class="page-subtitle">
+                <span data-lang="en">Structured overview of my engineering, systems, and program delivery competencies.</span>
+                <span data-lang="de">Strukturierter Überblick über meine ingenieurtechnischen, systembezogenen und programmbezogenen Kompetenzen.</span>
+            </p>
+            
+            <!-- Skills Filter Buttons -->
+            <div class="skills-filter">
+                <button class="skill-filter-btn active" data-filter="all">
+                    <i class="fas fa-layer-group"></i>
+                    <span data-lang="en">All Skills</span>
+                    <span data-lang="de">Alle Kompetenzen</span>
+                </button>
+                <button class="skill-filter-btn" data-filter="delivery">
+                    <i class="fas fa-server"></i>
+                    <span data-lang="en">Delivery</span>
+                    <span data-lang="de">Umsetzung</span>
+                </button>
+                <button class="skill-filter-btn" data-filter="Systems">
+                    <i class="fas fa-desktop"></i>
+                    <span data-lang="en">Systems</span>
+                    <span data-lang="de">Systeme</span>
+                </button>
+                <button class="skill-filter-btn" data-filter="Quality">
+                    <i class="fas fa-database"></i>
+                    <span data-lang="en">Quality</span>
+                    <span data-lang="de">Qualität</span>
+                </button>
+                <button class="skill-filter-btn" data-filter="Data">
+                    <i class="fas fa-cloud"></i>
+                    <span data-lang="en">Data</span>
+                    <span data-lang="de">Daten</span>
+                </button>
+                <button class="skill-filter-btn" data-filter="Tools">
+                    <i class="fas fa-tools"></i>
+                    <span data-lang="en">Tools</span>
+                    <span data-lang="de">Tools</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Timeline -->
+   <section class="skills-timeline-section">
+        <div class="container">
+            <div class="timeline">
+                <div class="timeline-item" data-category="delivery">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="skill-category-header">
+                                <div class="category-title">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span data-lang="en">Delivery</span>
+                                    <span data-lang="de">Umsetzung</span>
+                                </div>
+                                <span class="proficiency-level">
+                                    <i class="fas fa-star"></i>
+                                    <span data-lang="en">Expert</span>
+                                    <span data-lang="de">Experte</span>
+                                </span>
+                            </div>
+                            
+                            <div class="timeline-body">
+                                <div class="skill-level-container">
+                                    
+                                    <!-- Technical Program Management -->
+                                    <div class="skill-item" data-percentage="100">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-tasks skill-icon"></i>
+                                                <span>Technical Program Management</span>
+                                            </div>
+                                            <span class="skill-percentage">100%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="100"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- End-to-End Delivery Ownership -->
+                                    <div class="skill-item" data-percentage="100">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-route skill-icon"></i>
+                                                <span>End-to-End Delivery Ownership</span>
+                                            </div>
+                                            <span class="skill-percentage">100%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="100"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Risk, Dependency & Issue Management -->
+                                    <div class="skill-item" data-percentage="100">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-exclamation-triangle skill-icon"></i>
+                                                <span>Risk, Dependency & Issue Management</span>
+                                            </div>
+                                            <span class="skill-percentage">100%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="100"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Multi-Stakeholder Coordination -->
+                                    <div class="skill-item" data-percentage="100">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-users skill-icon"></i>
+                                                <span>Multi-Stakeholder Coordination</span>
+                                            </div>
+                                            <span class="skill-percentage">100%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="100"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Change & Scope Governance -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-exchange-alt skill-icon"></i>
+                                                <span>Change & Scope Governance</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Agile & Hybrid Delivery -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-sync-alt skill-icon"></i>
+                                                <span>Agile & Hybrid Delivery (Scrum, Kanban)</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Management Reporting & Steering -->
+                                    <div class="skill-item" data-percentage="100">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-chart-line skill-icon"></i>
+                                                <span>Management Reporting & Steering Committees</span>
+                                            </div>
+                                            <span class="skill-percentage">100%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-description">
+                                    <p>
+                                        <span data-lang="en">
+                                            End-to-end responsibility for planning, coordinating, and delivering complex technical programs across multiple stakeholders, with strong focus on governance, risk control, and predictable execution.
+                                        </span>
+                                        <span data-lang="de">
+                                            End-to-End-Verantwortung für Planung, Koordination und Umsetzung komplexer technischer Programme mit mehreren Stakeholdern, mit starkem Fokus auf Governance, Risikokontrolle und verlässliche Ausführung.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag"><i class="fas fa-project-diagram"></i> Program Delivery</span>
+                                    <span class="tech-tag"><i class="fas fa-users"></i> Stakeholder Management</span>
+                                    <span class="tech-tag"><i class="fas fa-exclamation-triangle"></i> Risk Management</span>
+                                    <span class="tech-tag"><i class="fas fa-sync-alt"></i> Agile / Hybrid</span>
+                                    <span class="tech-tag"><i class="fas fa-chart-line"></i> Management Reporting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Systems / Systeme -->
+<div class="timeline-item" data-category="Systems">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="skill-category-header">
+                                <div class="category-title">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span data-lang="en">Systems</span>
+                                    <span data-lang="de">Systeme</span>
+                                </div>
+                                <span class="proficiency-level">
+                                    <i class="fas fa-star"></i>
+                                    <span data-lang="en">Advanced</span>
+                                    <span data-lang="de">Fortgeschritten</span>
+                                </span>
+                            </div>
+                            
+                            <div class="timeline-body">
+                                <div class="skill-level-container">
+                                    
+                                    <!-- Software Lifecycle (SDLC) Steering -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-sync-alt skill-icon"></i>
+                                                <span>Software Lifecycle (SDLC) Steering</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- System & ECU Integration -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-microchip skill-icon"></i>
+                                                <span>System & ECU Integration (Automotive)</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Interface & Dependency Analysis -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-share-alt skill-icon"></i>
+                                                <span>Interface & Dependency Analysis</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Release Readiness & Go/No-Go -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-flag-checkered skill-icon"></i>
+                                                <span>Release Readiness & Go/No-Go Support</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- V-Model Understanding -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-project-diagram skill-icon"></i>
+                                                <span>V-Model Understanding</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Cross-Domain System Coordination -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-network-wired skill-icon"></i>
+                                                <span>Cross-Domain System Coordination</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Requirements Traceability -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-link skill-icon"></i>
+                                                <span>Requirements Traceability (ALM / DOORS)</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-description">
+                                    <p>
+                                        <span data-lang="en">
+                                            Strong capability in understanding, coordinating, and steering complex software-intensive systems, with focus on integration, dependencies, and release readiness rather than system architecture design.
+                                        </span>
+                                        <span data-lang="de">
+                                            Starke Fähigkeit zum Verständnis, zur Koordination und Steuerung komplexer softwareintensiver Systeme mit Fokus auf Integration, Abhängigkeiten und Release-Reife – ohne Anspruch auf Systemarchitektur.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag"><i class="fas fa-sync-alt"></i> SDLC</span>
+                                    <span class="tech-tag"><i class="fas fa-microchip"></i> ECU Integration</span>
+                                    <span class="tech-tag"><i class="fas fa-share-alt"></i> Interfaces</span>
+                                    <span class="tech-tag"><i class="fas fa-flag-checkered"></i> Release Readiness</span>
+                                    <span class="tech-tag"><i class="fas fa-link"></i> Traceability</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- Quality / Qualität -->
+<div class="timeline-item" data-category="Quality">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="skill-category-header">
+                                <div class="category-title">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-lang="en">Quality</span>
+                                    <span data-lang="de">Qualität</span>
+                                </div>
+                                <span class="proficiency-level">
+                                    <i class="fas fa-star"></i>
+                                    <span data-lang="en">Advanced</span>
+                                    <span data-lang="de">Fortgeschritten</span>
+                                </span>
+                            </div>
+                            
+                            <div class="timeline-body">
+                                <div class="skill-level-container">
+                                    
+                                    <!-- Quality Gates & Validation Governance -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-shield-alt skill-icon"></i>
+                                                <span>Quality Gates & Validation Governance</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Test Strategy & Regression Planning -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-vial skill-icon"></i>
+                                                <span>Test Strategy & Regression Planning</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- ISTQB Foundation Level -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-certificate skill-icon"></i>
+                                                <span>ISTQB® Foundation Level Knowledge</span>
+                                            </div>
+                                            <span class="skill-percentage">Certified</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Defect & Quality Metrics -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-chart-bar skill-icon"></i>
+                                                <span>Defect & Quality Metrics Interpretation</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Validation Readiness & Release Criteria -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-flag-checkered skill-icon"></i>
+                                                <span>Validation Readiness & Release Criteria</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Tool-Supported Testing -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-tools skill-icon"></i>
+                                                <span>Tool-Supported Testing (ecu.test, CANape)</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-description">
+                                    <p>
+                                        <span data-lang="en">
+                                            Strong focus on quality stability, validation governance, and predictable releases in software-intensive automotive environments, ensuring readiness and compliance across complex programs.
+                                        </span>
+                                        <span data-lang="de">
+                                            Starker Fokus auf Qualitätsstabilität, Validierungs-Governance und planbare Releases in softwareintensiven Automotive-Umgebungen zur Sicherstellung von Reifegrad und Compliance.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag"><i class="fas fa-shield-alt"></i> Quality Gates</span>
+                                    <span class="tech-tag"><i class="fas fa-vial"></i> Testing</span>
+                                    <span class="tech-tag"><i class="fas fa-certificate"></i> ISTQB</span>
+                                    <span class="tech-tag"><i class="fas fa-chart-bar"></i> Quality Metrics</span>
+                                    <span class="tech-tag"><i class="fas fa-tools"></i> Validation Tools</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Data / Daten -->
+<div class="timeline-item" data-category="Data">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="skill-category-header">
+                                <div class="category-title">
+                                    <i class="fas fa-database"></i>
+                                    <span data-lang="en">Data</span>
+                                    <span data-lang="de">Daten</span>
+                                </div>
+                                <span class="proficiency-level">
+                                    <i class="fas fa-star"></i>
+                                    <span data-lang="en">Advanced</span>
+                                    <span data-lang="de">Fortgeschritten</span>
+                                </span>
+                            </div>
+                            
+                            <div class="timeline-body">
+                                <div class="skill-level-container">
+                                    
+                                    <!-- Data Interpretation & KPI-Based Decisions -->
+                                    <div class="skill-item" data-percentage="75">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-chart-pie skill-icon"></i>
+                                                <span>Data Interpretation & KPI-Based Decisions</span>
+                                            </div>
+                                            <span class="skill-percentage">75%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="75"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- SQL -->
+                                    <div class="skill-item" data-percentage="60">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-database skill-icon"></i>
+                                                <span>SQL (Queries & Analysis)</span>
+                                            </div>
+                                            <span class="skill-percentage">60%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="60"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Python -->
+                                    <div class="skill-item" data-percentage="60">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fab fa-python skill-icon"></i>
+                                                <span>Python (Automation & Data Processing)</span>
+                                            </div>
+                                            <span class="skill-percentage">60%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="60"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Reporting & Status Consolidation -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-file-alt skill-icon"></i>
+                                                <span>Reporting & Status Consolidation</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Risk & Delivery Metrics -->
+                                    <div class="skill-item" data-percentage="90">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-exclamation-circle skill-icon"></i>
+                                                <span>Risk & Delivery Metrics</span>
+                                            </div>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- AI/ML Lifecycle Understanding -->
+                                    <div class="skill-item" data-percentage="70">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-brain skill-icon"></i>
+                                                <span>AI/ML Lifecycle Understanding (Conceptual)</span>
+                                            </div>
+                                            <span class="skill-percentage">70%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="70"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-description">
+                                    <p>
+                                        <span data-lang="en">
+                                            Strong data literacy applied to decision support, automation, and delivery transparency, with focus on KPIs, reporting, and risk metrics rather than data science or model development.
+                                        </span>
+                                        <span data-lang="de">
+                                            Starke Datenkompetenz zur Entscheidungsunterstützung, Automatisierung und Liefertransparenz mit Fokus auf KPIs, Reporting und Risikokennzahlen – nicht auf Data Science.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag"><i class="fas fa-chart-pie"></i> KPIs</span>
+                                    <span class="tech-tag"><i class="fas fa-database"></i> SQL</span>
+                                    <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                                    <span class="tech-tag"><i class="fas fa-file-alt"></i> Reporting</span>
+                                    <span class="tech-tag"><i class="fas fa-brain"></i> AI/ML Lifecycle</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Tools -->
+<div class="timeline-item" data-category="tools">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="skill-category-header">
+                                <div class="category-title">
+                                    <i class="fas fa-tools"></i>
+                                    <span data-lang="en">Tools</span>
+                                    <span data-lang="de">Tools</span>
+                                </div>
+                                <span class="proficiency-level">
+                                    <i class="fas fa-star"></i>
+                                    <span data-lang="en">Applied</span>
+                                    <span data-lang="de">Praxisorientiert</span>
+                                </span>
+                            </div>
+                            
+                            <div class="timeline-body">
+                                <div class="skill-level-container">
+                                    
+                                    <!-- JIRA, Confluence -->
+                                    <div class="skill-item" data-percentage="80">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-tasks skill-icon"></i>
+                                                <span>JIRA, Confluence</span>
+                                            </div>
+                                            <span class="skill-percentage">80%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="80"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- ALM Octane, Codebeamer, IBM DOORS -->
+                                    <div class="skill-item" data-percentage="75">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-project-diagram skill-icon"></i>
+                                                <span>ALM Octane, Codebeamer, IBM DOORS</span>
+                                            </div>
+                                            <span class="skill-percentage">75%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="75"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Git / GitHub -->
+                                    <div class="skill-item" data-percentage="60">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fab fa-git-alt skill-icon"></i>
+                                                <span>Git / GitHub</span>
+                                            </div>
+                                            <span class="skill-percentage">60%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="60"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Python, SQL -->
+                                    <div class="skill-item" data-percentage="50">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-code skill-icon"></i>
+                                                <span>Python, SQL (Supporting)</span>
+                                            </div>
+                                            <span class="skill-percentage">50%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="50"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- MATLAB / Simulink -->
+                                    <div class="skill-item" data-percentage="40">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-chart-line skill-icon"></i>
+                                                <span>MATLAB / Simulink</span>
+                                            </div>
+                                            <span class="skill-percentage">40%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="40"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- CAD & CAE Tools -->
+                                    <div class="skill-item" data-percentage="70">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-cube skill-icon"></i>
+                                                <span>CATIA V5, Siemens NX, SolidWorks, Ansys</span>
+                                            </div>
+                                            <span class="skill-percentage">70%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="70"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Enterprise Tools -->
+                                    <div class="skill-item" data-percentage="80">
+                                        <div class="skill-name-row">
+                                            <div class="skill-name">
+                                                <i class="fas fa-building skill-icon"></i>
+                                                <span>MS Office, SharePoint, SAP S/4HANA</span>
+                                            </div>
+                                            <span class="skill-percentage">80%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-level" data-level="80"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-description">
+                                    <p>
+                                        <span data-lang="en">
+                                            Broad and practical tooling experience gained through real-world program execution, supporting planning, governance, engineering coordination, and enterprise delivery environments.
+                                        </span>
+                                        <span data-lang="de">
+                                            Breite und praxisnahe Tool-Erfahrung aus realen Programmen zur Unterstützung von Planung, Governance, Engineering-Koordination und Enterprise-Delivery-Umgebungen.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-footer">
+                                <div class="tech-tags">
+                                    <span class="tech-tag"><i class="fas fa-tasks"></i> ALM</span>
+                                    <span class="tech-tag"><i class="fab fa-git-alt"></i> Version Control</span>
+                                    <span class="tech-tag"><i class="fas fa-cube"></i> CAD / CAE</span>
+                                    <span class="tech-tag"><i class="fas fa-building"></i> Enterprise Tools</span>
+                                    <span class="tech-tag"><i class="fas fa-code"></i> Supporting Scripting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    </section>
+
+ <!-- Additional Skills Section -->
+<section class="additional-skills-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-plus-circle"></i>
+                <span data-lang="en">Additional Competencies</span>
+                <span data-lang="de">Zusätzliche Kompetenzen</span>
+            </h2>
+            
+            <div class="skills-grid">
+                <!-- Engineering Background -->
+                <div class="skill-card">
+                    <div class="skill-card-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="skill-card-title">Engineering Fundamentals</h3>
+                    <p class="skill-card-desc">
+                        <span data-lang="en">Mechanical engineering background supporting technical decision-making</span>
+                        <span data-lang="de">Maschinenbaulicher Hintergrund zur fundierten technischen Entscheidungsfindung</span>
+                    </p>
+                </div>
+                
+                <!-- Automotive Domain -->
+                <div class="skill-card">
+                    <div class="skill-card-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="skill-card-title">Automotive Domain</h3>
+                    <p class="skill-card-desc">
+                        <span data-lang="en">Experience in software-intensive automotive programs and OEM environments</span>
+                        <span data-lang="de">Erfahrung in softwareintensiven Automotive-Programmen und OEM-Umgebungen</span>
+                    </p>
+                </div>
+                
+                <!-- Requirements & Governance -->
+                <div class="skill-card">
+                    <div class="skill-card-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3 class="skill-card-title">Requirements & Governance</h3>
+                    <p class="skill-card-desc">
+                        <span data-lang="en">Structured requirements handling, traceability, and governance support</span>
+                        <span data-lang="de">Strukturierter Umgang mit Anforderungen, Traceability und Governance-Unterstützung</span>
+                    </p>
+                </div>
+                
+                <!-- International Collaboration -->
+                <div class="skill-card">
+                    <div class="skill-card-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="skill-card-title">International Collaboration</h3>
+                    <p class="skill-card-desc">
+                        <span data-lang="en">Cross-cultural collaboration in distributed, multi-country teams</span>
+                        <span data-lang="de">Interkulturelle Zusammenarbeit in verteilten, internationalen Teams</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- CTA Section -->
+<section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">
+                    <span data-lang="en">Ready to Drive Reliable Technical Delivery?</span>
+                    <span data-lang="de">Bereit für verlässliche technische Umsetzung?</span>
+                </h2>
+                <p class="cta-description">
+                    <span data-lang="en">
+                        I apply engineering discipline, structured program delivery, and clear technical coordination to ensure predictable outcomes in complex, multi-stakeholder environments.
+                    </span>
+                    <span data-lang="de">
+                        Ich verbinde ingenieurwissenschaftliche Disziplin mit strukturierter Programmsteuerung und klarer technischer Koordination, um verlässliche Ergebnisse in komplexen Umgebungen sicherzustellen.
+                    </span>
+                </p>
+                <div class="cta-actions">
+                    <a href="projects.html" class="btn btn-primary">
+                        <i class="fas fa-project-diagram"></i>
+                        <span data-lang="en">View Projects</span>
+                        <span data-lang="de">Projekte ansehen</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline">
+                        <i class="fas fa-comment-alt"></i>
+                        <span data-lang="en">Start a Conversation</span>
+                        <span data-lang="de">Gespräch starten</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">ABHISHEK ARVINDBHAI BORISAGAR</span>
+                </div>
+                
+                <p class="footer-tagline">
+                    <span data-lang="en">Technical Program Manager – Software, Systems & Delivery Excellence </span>
+                    <span data-lang="de">Technischer Programmmanager – Software-, System- & Lieferexzellenz</span>
+                </p>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/abhishek-arvindbhai-borisagar2309/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/borisagarabhishek93-cmyk" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:borisagarabhishek93@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="home.html" data-lang="en">Home</a>
+                    <a href="home.html" data-lang="de">Startseite</a>
+                    <a href="experience.html" data-lang="en">Experience</a>
+                    <a href="experience.html" data-lang="de">Erfahrung</a>
+                    <a href="projects.html" data-lang="en">Projects</a>
+                    <a href="projects.html" data-lang="de">Projekte</a>
+                    <a href="skills.html" data-lang="en">Skills</a>
+                    <a href="skills.html" data-lang="de">Fähigkeiten</a>
+                    <a href="edu.html" data-lang="en">Education</a>
+                    <a href="edu.html" data-lang="de">Bildung</a>
+                    <a href="contact.html" data-lang="en">Contact</a>
+                    <a href="contact.html" data-lang="de">Kontakt</a>
+                </div>
+                
+                <p class="copyright">
+                    &copy; <span id="currentYear"></span> ABHISHEK ARVINDBHAI BORISAGAR. 
+                    <span data-lang="en">All rights reserved.</span>
+                    <span data-lang="de">Alle Rechte vorbehalten.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/theme-language.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/experience.js"></script>
+    
+    <script>
+        // Initialize current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Enhanced scrollbar functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineContainer = document.querySelector('.timeline-container');
+            
+            if (timelineContainer) {
+                // Add scroll indicator
+                const scrollIndicator = document.createElement('div');
+                scrollIndicator.className = 'scroll-indicator';
+                scrollIndicator.innerHTML = '<i class="fas fa-chevron-down"></i> Scroll for more';
+                scrollIndicator.style.cssText = 'position: absolute; bottom: 10px; right: 20px; font-size: 0.8rem; color: var(--primary-color); opacity: 0.7;';
+                timelineContainer.parentElement.style.position = 'relative';
+                timelineContainer.parentElement.appendChild(scrollIndicator);
+                
+                // Hide indicator when scrolled
+                timelineContainer.addEventListener('scroll', function() {
+                    const isScrolled = this.scrollTop > 10;
+                    scrollIndicator.style.opacity = isScrolled ? '0' : '0.7';
+                    scrollIndicator.style.transition = 'opacity 0.3s ease';
+                });
+            }
+            
+            // Animate skill bars when they come into view
+            const skillItems = document.querySelectorAll('.skill-item');
+            
+            const skillObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillItem = entry.target;
+                        const skillLevel = skillItem.querySelector('.skill-level');
+                        const percentage = skillItem.getAttribute('data-percentage');
+                        
+                        // Animate skill bar
+                        if (skillLevel) {
+                            skillLevel.style.width = percentage + '%';
+                            
+                            // Animate percentage number
+                            const percentageElement = skillItem.querySelector('.skill-percentage');
+                            if (percentageElement) {
+                                let current = 0;
+                                const target = parseInt(percentage);
+                                const increment = target / 50; // 50 steps
+                                const timer = setInterval(() => {
+                                    current += increment;
+                                    if (current >= target) {
+                                        current = target;
+                                        clearInterval(timer);
+                                    }
+                                    percentageElement.textContent = Math.round(current) + '%';
+                                }, 20);
+                            }
+                        }
+                        
+                        skillObserver.unobserve(skillItem);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            skillItems.forEach(item => skillObserver.observe(item));
+            
+            // Initialize animations for timeline items
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.2}s`;
+                item.classList.add('animate-on-scroll');
+            });
+            
+            // Initialize observer for scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+            
+            // Initialize skills filter functionality
+            const filterButtons = document.querySelectorAll('.skill-filter-btn');
+            const skillCategories = document.querySelectorAll('.timeline-item');
+            
+            if (filterButtons.length && skillCategories.length) {
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Update active button
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        // Filter skill categories
+                        const filter = this.getAttribute('data-filter');
+                        
+                        skillCategories.forEach(category => {
+                            const categoryType = category.getAttribute('data-category');
+                            
+                            if (filter === 'all' || categoryType === filter) {
+                                category.style.display = 'block';
+                                setTimeout(() => {
+                                    category.style.opacity = '1';
+                                    category.style.transform = 'translateY(0)';
+                                }, 100);
+                            } else {
+                                category.style.opacity = '0';
+                                category.style.transform = 'translateY(20px)';
+                                setTimeout(() => {
+                                    category.style.display = 'none';
+                                }, 300);
+                            }
+                        });
+                    });
+                });
+            }
+            
+            // Add hover effects to skill cards
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

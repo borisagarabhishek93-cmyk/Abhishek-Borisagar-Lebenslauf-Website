@@ -1,0 +1,124 @@
+/* =========================
+   CONTACT PAGE – PREMIUM
+   ========================= */
+
+.contact-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* =========================
+   LAYOUT
+   ========================= */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 4rem;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================
+   CONTACT CARDS
+   ========================= */
+
+.contact-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+}
+
+/* =========================
+   TYPOGRAPHY
+   ========================= */
+
+.contact-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    color: var(--text-secondary);
+}
+
+/* =========================
+   CONTACT INFO LIST
+   ========================= */
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.contact-info-item i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+/* =========================
+   CONTACT FORM
+   ========================= */
+
+.contact-form .form-group {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background: var(--input-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--input-border);
+    border-radius: 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(93, 124, 247, 0.25);
+}
+
+/* =========================
+   CONTACT HERO FEEL
+   ========================= */
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+        circle,
+        rgba(93, 124, 247, 0.15),
+        transparent 70%
+    );
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}

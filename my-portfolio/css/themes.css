@@ -1,0 +1,179 @@
+/* ===== LIGHT THEME (DEFAULT) ===== */
+body[data-theme="light"] {
+    --primary-color: #4a6cf7;
+    --primary-dark: #3a5ce5;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --card-bg: #ffffff;
+    --nav-bg: #ffffff;
+    --hero-bg: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    --section-bg: #ffffff;
+    --footer-bg: #f5f5f5;
+    --footer-text: #111111;
+    --footer-secondary: #555555;
+    --nav-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --active-bg: rgba(74, 108, 247, 0.1);
+    --input-bg: #ffffff;
+    --input-border: #e0e0e0;
+    --filter-bg: #f0f0f0;
+    --filter-hover: #e0e0e0;
+    --tag-bg: rgba(74, 108, 247, 0.1);
+    --tech-bg: #f5f5f5;
+    --skill-bg: #f8f9fa;
+    --timeline-line: #e0e0e0;
+    --social-bg: rgba(255, 255, 255, 0.1);
+    --theme-btn-bg: #f0f0f0;
+    --theme-btn-color: #666666;
+    --theme-btn-hover: #e0e0e0;
+    --lang-switcher-bg: #f0f0f0;
+    --accent-color: var(--primary-color);
+    --footer-accent-bg: var(--footer-bg);
+}
+
+/* ===== DARK THEME ===== */
+body[data-theme="dark"] {
+    --primary-color: #5d7cf7;
+    --primary-dark: #4a6cf7;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --bg-primary: #121212;
+    --bg-secondary: #1a1a1a;
+    --card-bg: #1e1e1e;
+    --nav-bg: #1a1a1a;
+    --hero-bg: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+    --section-bg: #1a1a1a;
+    --footer-bg: #0a0a0a;
+    --footer-text: #ffffff;
+    --footer-secondary: #808080;
+    --nav-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    --active-bg: rgba(93, 124, 247, 0.2);
+    --input-bg: #2a2a2a;
+    --input-border: #3a3a3a;
+    --filter-bg: #2a2a2a;
+    --filter-hover: #3a3a3a;
+    --tag-bg: rgba(93, 124, 247, 0.2);
+    --tech-bg: #2a2a2a;
+    --skill-bg: #2a2a2a;
+    --timeline-line: #3a3a3a;
+    --social-bg: rgba(255, 255, 255, 0.05);
+    --theme-btn-bg: #2a2a2a;
+    --theme-btn-color: #b0b0b0;
+    --theme-btn-hover: #3a3a3a;
+    --lang-switcher-bg: #2a2a2a;
+    --accent-color: var(--primary-color);
+    --footer-accent-bg: var(--footer-bg);
+}
+
+/* ===== COLORED THEME ===== */
+body[data-theme="colored"] {
+    --primary-color: #fe6161;
+    --primary-dark: #fe6161;
+
+    /* TEXT */
+    --text-primary: #003366;
+    --text-secondary: #336699;
+
+    /* BACKGROUNDS */
+    --bg-primary: #f0f7ff;
+    --bg-secondary: #e6f2ff;
+    --card-bg: #ffffff;
+    --nav-bg: #ffffff;
+    --hero-bg: linear-gradient(135deg, #e6f2ff 0%, #ffffff 100%);
+    --section-bg: #f0f7ff;
+
+    /* ✅ FOOTER SHOULD BE Green */
+    --footer-bg: #fe6161;          /* Green */
+    --footer-text: #ffffff;
+    --footer-secondary: #fff1e6;
+
+    /* SHADOWS */
+    --nav-shadow: 0 2px 10px rgba(0, 51, 102, 0.1);
+    --card-shadow: 0 10px 30px rgba(0, 51, 102, 0.1);
+
+    /* STATES */
+    --active-bg: rgba(255, 107, 107, 0.1);
+
+    /* INPUTS */
+    --input-bg: #ffffff;
+    --input-border: #99ccff;
+
+    /* FILTERS */
+    --filter-bg: #e6f2ff;
+    --filter-hover: #d9ebff;
+
+    /* TAGS */
+    --tag-bg: rgba(255, 107, 107, 0.1);
+
+    /* SKILLS / TECH */
+    --tech-bg: #e6f2ff;
+    --skill-bg: #f0f7ff;
+    --timeline-line: #99ccff;
+
+    /* SOCIAL */
+    --social-bg: rgba(255, 255, 255, 0.1);
+
+    /* BUTTONS */
+    --theme-btn-bg: #e6f2ff;
+    --theme-btn-color: #336699;
+    --theme-btn-hover: #d9ebff;
+
+    --lang-switcher-bg: #e6f2ff;
+
+    /* ✅ NEW: BLUE ARROW COLOR */
+    --accent-color: #005eff;       /* BLUE */
+}
+
+
+/* ===== LANGUAGE SYSTEM ===== */
+
+body[lang="en"] [data-lang="de"],
+body[lang="de"] [data-lang="en"] {
+    display: none;
+}
+
+body[lang="en"] [data-lang="en"],
+body[lang="de"] [data-lang="de"] {
+    display: block;
+}
+
+/* Inline elements */
+body[lang="en"] [data-lang="de"].inline,
+body[lang="de"] [data-lang="en"].inline {
+    display: none;
+}
+
+body[lang="en"] [data-lang="en"].inline,
+body[lang="de"] [data-lang="de"].inline {
+    display: inline;
+}
+
+.theme-btn {
+    background: var(--secondary-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+}
+
+.theme-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+/* Keep language toggle buttons always visible */
+.language-switcher .lang-btn {
+    display: inline-flex !important;
+}

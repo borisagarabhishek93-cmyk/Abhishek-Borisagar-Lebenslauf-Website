@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Abhishek Arvindbhai Borisagar</title>
+    <meta name="description" content="Technical projects in AI, IoT, Web Development, and Embedded Systems.">
+    <meta name="keywords" content="AI Projects, IoT Solutions, Web Development, Embedded Systems">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    
+</head>
+<body data-theme="light" lang="en">
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="container nav-content">
+            <a href="home.html" class="logo">
+                <div class="logo-container">
+                    <img src="assets/images/logo.png" alt="Abhishek Arvindbhai Borisagar Logo" class="logo-img">
+                    <!-- <span class="logo-text">KB</span> -->
+                </div>
+            </a>
+            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="home.html" class="nav-link" data-lang="en">Home</a></li>
+                    <li><a href="home.html" class="nav-link" data-lang="de">Startseite</a></li>
+                    <li><a href="experience.html" class="nav-link" data-lang="en">Experience</a></li>
+                    <li><a href="experience.html" class="nav-link" data-lang="de">Erfahrung</a></li>
+                    <li><a href="projects.html" class="nav-link active" data-lang="en">Projects</a></li>
+                    <li><a href="projects.html" class="nav-link active" data-lang="de">Projekte</a></li>
+                    <li><a href="skills.html" class="nav-link" data-lang="en">Skills</a></li>
+                    <li><a href="skills.html" class="nav-link" data-lang="de">Fähigkeiten</a></li>
+                    <li><a href="edu.html" class="nav-link" data-lang="en">Education</a></li>
+                    <li><a href="edu.html" class="nav-link" data-lang="de">Bildung</a></li>
+                    <li><a href="contact.html" class="nav-link" data-lang="en">Contact</a></li>
+                    <li><a href="contact.html" class="nav-link" data-lang="de">Kontakt</a></li>
+                </ul>
+                
+                <div class="nav-controls">
+                    <!-- Theme Switcher -->
+                    <div class="theme-switcher">
+                        <button class="theme-btn active" data-theme="light" title="Light Theme">
+                            <i class="fas fa-sun"></i>
+                        </button>
+                        <button class="theme-btn" data-theme="dark" title="Dark Theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Language Switcher - UPDATED TO MATCH CONTACT.HTML -->
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="de">DE</button>
+                    </div>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Page Header -->
+<section class="page-header">
+        <div class="container">
+            <h1 class="page-title">
+                <i class="fas fa-project-diagram"></i>
+                <span class="title-text" data-lang="en">Technical Projects</span>
+                <span class="title-text" data-lang="de">Technische Projekte</span>
+            </h1>
+            <p class="page-subtitle">
+                <span data-lang="en">Selected projects demonstrating engineering thinking, system understanding, and practical execution</span>
+                <span data-lang="de">Ausgewählte Projekte zur Darstellung von ingenieurwissenschaftlichem Denken, Systemverständnis und praktischer Umsetzung</span>
+            </p>
+            
+            <div class="experience-filter">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-layer-group"></i>
+                    <span data-lang="en">All Projects</span>
+                    <span data-lang="de">Alle Projekte</span>
+                </button>
+                <button class="filter-btn" data-filter="engineering">
+                    <i class="fas fa-cogs"></i>
+                    <span data-lang="en">Engineering</span>
+                    <span data-lang="de">Engineering</span>
+                </button>
+                <button class="filter-btn" data-filter="systems">
+                    <i class="fas fa-project-diagram"></i>
+                    <span data-lang="en">Systems</span>
+                    <span data-lang="de">Systeme</span>
+                </button>
+                <button class="filter-btn" data-filter="data">
+                    <i class="fas fa-chart-pie"></i>
+                    <span data-lang="en">Data</span>
+                    <span data-lang="de">Daten</span>
+                </button>
+                <button class="filter-btn" data-filter="tools">
+                    <i class="fas fa-tools"></i>
+                    <span data-lang="en">Tools</span>
+                    <span data-lang="de">Tools</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Grid -->
+    <section class="projects-grid-section">
+        <div class="container">
+            <div class="projects-grid" id="projectsGrid">
+               <!-- AI Project 1 -->
+<div class="project-card" data-category="data">
+    <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+        <i class="fas fa-user-check"></i>
+    </div>
+    <div class="project-content">
+        <span class="project-category">Data / Systems</span>
+        <h3 class="project-title">Attendance Management System with Face Recognition</h3>
+        <p class="project-description" data-lang="en">Python-based attendance system using computer vision to automate identification and attendance tracking with focus on accuracy and validation.</p>
+        <p class="project-description" data-lang="de">Python-basiertes Anwesenheitssystem mit Computer-Vision zur automatisierten Identifikation und Anwesenheitserfassung mit Fokus auf Genauigkeit und Validierung.</p>
+        <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">Computer Vision</span>
+            <span class="tech-tag">Data Processing</span>
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/borisagarabhishek93-cmyk" target="_blank" class="project-link github">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+                
+                <!-- Systems Project -->    
+<div class="project-card" data-category="systems">
+    <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+        <i class="fas fa-microchip"></i>
+    </div>
+    <div class="project-content">
+        <span class="project-category">Systems</span>
+        <h3 class="project-title">Logic-Based Racing Simulation</h3>
+        <p class="project-description" data-lang="en">Simulation project focused on rule-based logic, state handling, and system behavior modeling for controlled racing scenarios.</p>
+        <p class="project-description" data-lang="de">Simulationsprojekt mit Fokus auf regelbasierter Logik, Zustandsverwaltung und Modellierung von Systemverhalten für kontrollierte Rennszenarien.</p>
+        <div class="project-tech">
+            <span class="tech-tag">System Logic</span>
+            <span class="tech-tag">State Management</span>
+            <span class="tech-tag">Simulation</span>
+            <span class="tech-tag">Control Flow</span>
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/borisagarabhishek93-cmyk" target="_blank" class="project-link github">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="#" class="project-link demo">
+                <i class="fas fa-external-link-alt"></i>
+                <span data-lang="en">Details</span>
+                <span data-lang="de">Details</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+                
+        <!-- Engineering Project -->
+<div class="project-card" data-category="engineering">
+    <div class="project-image" style="background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+        <i class="fas fa-cogs"></i>
+    </div>
+    <div class="project-content">
+        <span class="project-category">Engineering</span>
+        <h3 class="project-title">CAD Construction & Structural Analysis</h3>
+        <p class="project-description" data-lang="en">Design and structural analysis of a mechanical component using CAD modeling and simulation to evaluate load behavior and structural integrity.</p>
+        <p class="project-description" data-lang="de">Konstruktion und Strukturanalyse eines mechanischen Bauteils mittels CAD-Modellierung und Simulation zur Bewertung von Lastverhalten und struktureller Integrität.</p>
+        <div class="project-tech">
+            <span class="tech-tag">CATIA V5</span>
+            <span class="tech-tag">ANSYS</span>
+            <span class="tech-tag">Structural Analysis</span>
+            <span class="tech-tag">Mechanical Design</span>
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/borisagarabhishek93-cmyk" target="_blank" class="project-link github">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="#" class="project-link demo">
+                <i class="fas fa-external-link-alt"></i>
+                <span data-lang="en">Details</span>
+                <span data-lang="de">Details</span>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Tools Project -->
+<div class="project-card" data-category="tools">
+    <div class="project-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+        <i class="fas fa-tools"></i>
+    </div>
+    <div class="project-content">
+        <span class="project-category">Tools</span>
+        <h3 class="project-title">Personal Portfolio Website</h3>
+        <p class="project-description" data-lang="en">Personal portfolio website developed to present projects, skills, and experience with a structured and professional layout.</p>
+        <p class="project-description" data-lang="de">Persönliche Portfolio-Website zur strukturierten und professionellen Darstellung von Projekten, Kompetenzen und Erfahrungen.</p>
+        <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Responsive Design</span>
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/borisagarabhishek93-cmyk" target="_blank" class="project-link github">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="#" class="project-link demo">
+                <i class="fas fa-external-link-alt"></i>
+                <span data-lang="en">Details</span>
+                <span data-lang="de">Details</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Abhishek Arvindbhai Borisagar</span>
+                </div>
+                
+                <p class="footer-tagline">
+                    <span data-lang="en">Technical Program Manager – Software, Systems & Delivery Excellence </span>
+                    <span data-lang="de">Technischer Programmmanager – Software-, System- & Lieferexzellenz</span>
+                </p>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/abhishek-arvindbhai-borisagar2309/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/borisagarabhishek93-cmyk" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:borisagarabhishek93@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="home.html" data-lang="en">Home</a>
+                    <a href="home.html" data-lang="de">Startseite</a>
+                    <a href="experience.html" data-lang="en">Experience</a>
+                    <a href="experience.html" data-lang="de">Erfahrung</a>
+                    <a href="projects.html" data-lang="en">Projects</a>
+                    <a href="projects.html" data-lang="de">Projekte</a>
+                    <a href="skills.html" data-lang="en">Skills</a>
+                    <a href="skills.html" data-lang="de">Fähigkeiten</a>
+                    <a href="edu.html" data-lang="en">Education</a>
+                    <a href="edu.html" data-lang="de">Bildung</a>
+                    <a href="contact.html" data-lang="en">Contact</a>
+                    <a href="contact.html" data-lang="de">Kontakt</a>
+                </div>
+                
+                <p class="copyright">
+                    &copy; <span id="currentYear"></span> Abhishek Arvindbhai Borisagar. 
+                    <span data-lang="en">All rights reserved.</span>
+                    <span data-lang="de">Alle Rechte vorbehalten.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+<script src="js/main.js"></script>
+<script src="js/theme-language.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/experience.js"></script>    
+</body>
+</html>

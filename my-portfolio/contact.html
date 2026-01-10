@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | ABHISHEK ARVINDBHAI BORISAGAR</title>
+    <meta name="description" content="Contact Abhishek Arvindbhai Borisagar, Technical Program & Delivery Manager based in Germany. Open to leadership roles, program delivery discussions, and professional collaboration.">
+    <meta name="keywords" content="Technical Program Manager, Delivery Manager, Automotive Software, BMW, SDLC, Program Management, Germany">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    
+    <style>
+        /* Enhanced contact section styling */
+        .contact-hero-section {
+            padding: 100px 0 50px;
+            background: linear-gradient(135deg, var(--section-bg) 0%, var(--card-bg) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        
+        .contact-hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+        
+        .contact-hero-image {
+            flex: 1;
+            max-width: 500px;
+        }
+        
+        .contact-hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 18px;
+            color: var(--text-primary);
+        }
+        
+        .contact-hero-title .name-highlight {
+            color: var(--primary-color);
+            display: block;
+            font-size: 2.5rem;
+            margin-top: 10px;
+        }
+        
+        .contact-hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+        
+        .contact-hero-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+        
+        .contact-hero-actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-image-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-image-container i {
+            font-size: 8rem;
+            color: white;
+            opacity: 0.8;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Contact methods grid */
+        .contact-methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        .contact-method-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+
+    /* BLUE OUTLINE + GLOW (same system as Experience / Projects) */
+    border: 1.5px solid color-mix(in srgb, var(--primary-color) 60%, transparent);
+
+    box-shadow:
+        0 0 0 1px color-mix(in srgb, var(--primary-color) 35%, transparent),
+        0 18px 45px color-mix(in srgb, var(--primary-color) 22%, transparent),
+        0 30px 65px rgba(0, 0, 0, 0.6);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-method-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow:
+        0 0 0 2px rgba(74,108,247,0.55),
+        0 22px 55px rgba(74,108,247,0.28),
+        0 35px 80px rgba(0,0,0,0.65);
+}
+.contact-method-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--primary-color);
+    transition: height 0.3s ease;
+}
+
+.contact-method-card:hover::before {
+    height: 100%;
+}
+
+.contact-method-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .contact-method-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .contact-method-details {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .contact-method-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method-link:hover {
+            color: var(--primary-dark);
+            gap: 12px;
+        }
+        
+        /* Contact form styling */
+        .contact-form-section {
+            padding: 80px 0;
+            background: var(--section-bg);
+        }
+        
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 50px;
+
+    border: 1.5px solid color-mix(in srgb, var(--primary-color) 60%, transparent);
+
+    box-shadow:
+        0 0 0 1px color-mix(in srgb, var(--primary-color) 35%, transparent),
+        0 22px 55px color-mix(in srgb, var(--primary-color) 22%, transparent),
+        0 35px 80px rgba(0, 0, 0, 0.65);
+
+    position: relative;
+    overflow: hidden;
+}
+
+        .contact-form-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-form-title i {
+            color: var(--primary-color);
+        }
+        
+        .contact-form-subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+        }
+        
+        .form-control::placeholder {
+            color: var(--text-secondary);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(74, 108, 247, 0.3);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        /* Form success message */
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            background: rgba(46, 204, 113, 0.1);
+            border-radius: 15px;
+            border: 2px solid #2ecc71;
+            margin-top: 30px;
+        }
+        
+        .form-success i {
+            font-size: 3rem;
+            color: #2ecc71;
+            margin-bottom: 20px;
+        }
+        
+        .form-success h3 {
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 992px) {
+            .contact-hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-hero-text {
+                max-width: 100%;
+            }
+            
+            .contact-hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .contact-hero-title .name-highlight {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-hero-title {
+                font-size: 2rem;
+            }
+            
+            .contact-hero-title .name-highlight {
+                font-size: 2.3rem;
+            }
+            
+            .contact-hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .contact-form-container {
+                padding: 30px 20px;
+            }
+            
+            .contact-methods-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        
+        /* Scroll animation for contact cards */
+        .contact-method-card.animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .contact-method-card.animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        
+        /* Button styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(74, 108, 247, 0.3);
+        }
+        
+        .btn-secondary {
+            background: var(--card-bg);
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body data-theme="light" lang="en">
+        <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="container nav-content">
+            <a href="home.html" class="logo">
+                <div class="logo-container">
+                    <img src="assets/images/logo.png" alt="Abhishek Arvindbhai Borisagar Logo" class="logo-img">
+                </div>
+            </a>
+            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="home.html" class="nav-link" data-lang="en">Home</a></li>
+                    <li><a href="home.html" class="nav-link" data-lang="de">Startseite</a></li>
+                    <li><a href="experience.html" class="nav-link" data-lang="en">Experience</a></li>
+                    <li><a href="experience.html" class="nav-link" data-lang="de">Erfahrung</a></li>
+                    <li><a href="projects.html" class="nav-link" data-lang="en">Projects</a></li>
+                    <li><a href="projects.html" class="nav-link" data-lang="de">Projekte</a></li>
+                    <li><a href="skills.html" class="nav-link" data-lang="en">Skills</a></li>
+                    <li><a href="skills.html" class="nav-link" data-lang="de">Fähigkeiten</a></li>
+                    <li><a href="edu.html" class="nav-link" data-lang="en">Education</a></li>
+                    <li><a href="edu.html" class="nav-link" data-lang="de">Bildung</a></li>
+                    <li><a href="contact.html" class="nav-link" data-lang="en">Contact</a></li>
+                    <li><a href="contact.html" class="nav-link" data-lang="de">Kontakt</a></li>
+                </ul>
+                
+                <div class="nav-controls">
+                    <!-- Theme Switcher -->
+                    <div class="theme-switcher">
+                        <button class="theme-btn active" data-theme="light" title="Light Theme">
+                            <i class="fas fa-sun"></i>
+                        </button>
+                        <button class="theme-btn" data-theme="dark" title="Dark Theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Language Switcher - UPDATED TO MATCH CONTACT.HTML -->
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="de">DE</button>
+                    </div>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero-section">
+        <div class="container">
+            <div class="contact-hero-content">
+                <div class="contact-hero-text animate-on-scroll">
+                    <h1 class="contact-hero-title">
+                        <span data-lang="en">Building Systems </span>
+                        <span data-lang="de">Leistungsfähige Systeme</span>
+                        <br>
+                        <span class="name-highlight" data-lang="en">That Perform at Scale</span>
+                        <span class="name-highlight" data-lang="de">für skalierbaren Erfolg entwickeln</span>
+                    </h1>
+                    
+                    <h2 class="contact-hero-subtitle">
+                        <span data-lang="en">Driving Complex Programs. Delivering Real Impact.</span>
+                        <span data-lang="de">Komplexe Programme steuern. Nachhaltige Wirkung erzielen.</span>
+                    </h2>
+                    
+                    <p class="contact-hero-description">
+                        <span data-lang="en">
+                            Let’s connect to discuss leadership roles, program execution, and high-impact technical initiatives.
+I collaborate with organizations to turn complex systems into reliable, scalable outcomes.
+                        </span>
+                        <span data-lang="de">
+                            Lassen Sie uns über Führungsrollen, Programmeffizienz und wirkungsvolle technische Initiativen sprechen.
+Ich unterstütze Organisationen dabei, komplexe Systeme in zuverlässige und skalierbare Ergebnisse zu überführen.
+                        </span>
+                    </p>
+                    
+                    <div class="contact-hero-actions">
+                        <a href="#contact-form" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-lang="en">Send Message</span>
+                            <span data-lang="de">Nachricht senden</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-hero-image animate-on-scroll delay-1">
+                    <div class="contact-image-container">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Methods Grid -->
+            <div class="contact-methods-grid">
+                <div class="contact-method-card animate-on-scroll delay-2">
+                    <div class="contact-method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="contact-method-title">
+                        <span data-lang="en">Email</span>
+                        <span data-lang="de">E-Mail</span>
+                    </h3>
+                    <p class="contact-method-details">
+                        <span data-lang="en">For project inquiries, collaborations, or job opportunities</span>
+                        <span data-lang="de">Für Projektanfragen, Zusammenarbeiten oder Jobmöglichkeiten</span>
+                    </p>
+                    <a href="mailto:borisagarabhishek93@gmail.com" class="contact-method-link">
+                        borisagarabhishek93@gmail.com
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="contact-method-card animate-on-scroll delay-3">
+                    <div class="contact-method-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="contact-method-title">
+                        <span data-lang="en">Phone</span>
+                        <span data-lang="de">Telefon</span>
+                    </h3>
+                    <p class="contact-method-details">
+                        <span data-lang="en">Available for calls and technical discussions</span>
+                        <span data-lang="de">Verfügbar für Anrufe und technische Diskussionen</span>
+                    </p>
+                    <a href="tel:+4917648060918" class="contact-method-link">
+                        +49 176 48060918
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="contact-method-card animate-on-scroll delay-4">
+                    <div class="contact-method-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3 class="contact-method-title">LinkedIn</h3>
+                    <p class="contact-method-details">
+                        <span data-lang="en">Connect professionally and follow my career updates</span>
+                        <span data-lang="de">Beruflich vernetzen und Karriere-Updates folgen</span>
+                    </p>
+                    <a href="https://www.linkedin.com/in/abhishek-arvindbhai-borisagar2309/" target="_blank" class="contact-method-link">
+                        linkedin.com/in/abhishek-arvindbhai-borisagar
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section" id="contact-form">
+        <div class="container">
+            <div class="contact-form-container animate-on-scroll">
+                <h2 class="contact-form-title">
+                    <i class="fas fa-paper-plane"></i>
+                    <span data-lang="en">Send Me a Message</span>
+                    <span data-lang="de">Senden Sie mir eine Nachricht</span>
+                </h2>
+                
+                <p class="contact-form-subtitle">
+                    <span data-lang="en">Fill out the form below and I'll get back to you as soon as possible</span>
+                    <span data-lang="de">Füllen Sie das Formular aus und ich melde mich so schnell wie möglich bei Ihnen</span>
+                </p>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label class="form-label" data-lang="en">Your Name</label>
+                        <label class="form-label" data-lang="de">Ihr Name</label>
+                        <input type="text" class="form-control" required 
+                               placeholder="John Doe" data-placeholder-en="John Doe"
+                               placeholder="Max Mustermann" data-placeholder-de="Max Mustermann">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" data-lang="en">Email Address</label>
+                        <label class="form-label" data-lang="de">E-Mail-Adresse</label>
+                        <input type="email" class="form-control" required 
+                               placeholder="john@example.com" data-placeholder-en="john@example.com"
+                               placeholder="max@beispiel.de" data-placeholder-de="max@beispiel.de">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" data-lang="en">Subject</label>
+                        <label class="form-label" data-lang="de">Betreff</label>
+                        <select class="form-control" required>
+                            <option value="" selected disabled data-lang="en">Select a subject</option>
+                            <option value="" selected disabled data-lang="de">Wählen Sie einen Betreff</option>
+                            <option value="job" data-lang="en">Job Opportunity</option>
+                            <option value="job" data-lang="de">Job-Möglichkeit</option>
+                            <option value="freelance" data-lang="en">Freelance Project</option>
+                            <option value="freelance" data-lang="de">Freiberufliches Projekt</option>
+                            <option value="consultation" data-lang="en">Technical Consultation</option>
+                            <option value="consultation" data-lang="de">Technische Beratung</option>
+                            <option value="other" data-lang="en">Other</option>
+                            <option value="other" data-lang="de">Andere</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" data-lang="en">Message</label>
+                        <label class="form-label" data-lang="de">Nachricht</label>
+                        <textarea class="form-control" rows="6" required 
+                                  placeholder="Your message here..." data-placeholder-en="Your message here..."
+                                  placeholder="Ihre Nachricht hier..." data-placeholder-de="Ihre Nachricht hier..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span data-lang="en">Send Message</span>
+                        <span data-lang="de">Nachricht senden</span>
+                    </button>
+                </form>
+                 
+                <!-- Success Message (hidden by default) -->
+                <div class="form-success" id="formSuccess">
+                    <i class="fas fa-check-circle"></i>
+                    <h3 data-lang="en">Message Sent Successfully!</h3>
+                    <h3 data-lang="de">Nachricht erfolgreich gesendet!</h3>
+                    <p data-lang="en">Thank you for your message. I'll get back to you within 24 hours.</p>
+                    <p data-lang="de">Vielen Dank für Ihre Nachricht. Ich melde mich innerhalb von 24 Stunden bei Ihnen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Abhishek Arvindbhai Borisagar</span>
+                </div>
+                
+                <p class="footer-tagline">
+                    <span data-lang="en">Technical Program Manager – Software, Systems & Delivery Excellence </span>
+                    <span data-lang="de">Technischer Programmmanager – Software-, System- & Lieferexzellenz</span>
+                </p>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/abhishek-arvindbhai-borisagar2309/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/borisagarabhishek93-cmyk" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:borisagarabhishek93@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="home.html" data-lang="en">Home</a>
+                    <a href="home.html" data-lang="de">Startseite</a>
+                    <a href="experience.html" data-lang="en">Experience</a>
+                    <a href="experience.html" data-lang="de">Erfahrung</a>
+                    <a href="projects.html" data-lang="en">Projects</a>
+                    <a href="projects.html" data-lang="de">Projekte</a>
+                    <a href="skills.html" data-lang="en">Skills</a>
+                    <a href="skills.html" data-lang="de">Fähigkeiten</a>
+                    <a href="edu.html" data-lang="en">Education</a>
+                    <a href="edu.html" data-lang="de">Bildung</a>
+                    <a href="contact.html" data-lang="en">Contact</a>
+                    <a href="contact.html" data-lang="de">Kontakt</a>
+                </div>
+                
+                <p class="copyright">
+                    &copy; <span id="currentYear"></span> ABHISHEK ARVINDBHAI BORISAGAR. 
+                    <span data-lang="en">All rights reserved.</span>
+                    <span data-lang="de">Alle Rechte vorbehalten.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="js/theme-language.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/form-handler.js"></script>
+    
+</body>
+</html>
